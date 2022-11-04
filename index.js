@@ -78,6 +78,12 @@ app.use('/beetrack', async (req, res) => {
     }
 })
 
+app.use('/webhook', async (req, res) => {
+    const data = req.body;
+    console.log(data);
+})
+
+
 app.listen(PORT, () => {
     console.log(`El servidor esta funcionando en el puerto ${PORT}`);
 })
