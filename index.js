@@ -80,6 +80,7 @@ app.use('/beetrack', async (req, res) => {
 
 app.use('/getPlaces', async (req, res) => {
     const data = req.body;
+    console.log('data',data);
     try {
         const url = `https://maps.googleapis.com/maps/api/place/autocomplete/json?input=${data.address}&key=AIzaSyD7JwtgmRYOTw72NyQDcP2ID8RBq3Lu8nA`;
         const response = await axios.post(url);
