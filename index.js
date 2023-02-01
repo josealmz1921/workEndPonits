@@ -82,7 +82,7 @@ app.use('/getPlaces', async (req, res) => {
     const data = req.body;
     console.log('data',data);
     try {
-        const url = `https://maps.googleapis.com/maps/api/place/autocomplete/json?input=${data.address}&key=AIzaSyD7JwtgmRYOTw72NyQDcP2ID8RBq3Lu8nA`;
+        const url = `https://maps.googleapis.com/maps/api/place/autocomplete/json?input=${data.address}&key=`;
         const response = await axios.post(url);
         const result = response.data
         res.send(result.predictions)
